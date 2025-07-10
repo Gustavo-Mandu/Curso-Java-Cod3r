@@ -1,0 +1,28 @@
+package oo.polimorfismo;
+
+public class Jantar {
+
+	public static void main(String[] args) {
+		
+		Pessoa convidado = new Pessoa(99.65);
+		
+		Arroz ingrediente1 = new Arroz(0.2);
+		Feijao ingrediente2 = new Feijao(0.1);
+		
+		Alimento ingrediente3 = new Arroz(0.3);
+		
+		System.out.println("Não comeu nada: "+convidado.getPeso());
+		
+		convidado.comer(ingrediente1);
+		convidado.comer(ingrediente2);
+		convidado.comer(ingrediente3);
+		
+		System.out.println("Comeu arroz, feijão e algo estranho: " + convidado.getPeso());
+		
+		Sorvete sobremesa = new Sorvete(0.4);
+		
+		convidado.comer(sobremesa);
+		
+		System.out.println("Comeu sorvete: " + convidado.getPeso());
+	}
+}
